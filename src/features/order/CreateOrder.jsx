@@ -1,4 +1,5 @@
 // https://uibakery.io/regex-library/phone-number
+// eslint-disable-next-line
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
     str
@@ -30,6 +31,7 @@ const fakeCart = [
 
 function CreateOrder() {
   // const [withPriority, setWithPriority] = useState(false);
+  // eslint-disable-next-line
   const cart = fakeCart;
 
   return (

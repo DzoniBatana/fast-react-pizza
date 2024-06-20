@@ -1,4 +1,8 @@
+import { formatCurrency } from "../../utils/helpers";
+
+// eslint-disable-next-line
 function CartItem({ item }) {
+  // eslint-disable-next-line
   const { pizzaId, name, quantity, totalPrice } = item;
 
   return (
