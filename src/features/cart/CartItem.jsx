@@ -1,5 +1,6 @@
 import { formatCurrency } from '../../utils/helpers';
 import DeleteItem from './DeleteItem';
+import UpdateItemQuantity from './UpdateItemQuantity';
 
 // eslint-disable-next-line
 function CartItem({ item }) {
@@ -14,6 +15,7 @@ function CartItem({ item }) {
       <div className="flex items-center justify-between sm:gap-6">
         <p className="text-sm font-bold">{formatCurrency(totalPrice)}</p>
 
+        <UpdateItemQuantity pizzaId={pizzaId} />
         <DeleteItem pizzaId={pizzaId} />
       </div>
     </li>
