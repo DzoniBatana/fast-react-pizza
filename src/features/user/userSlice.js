@@ -50,11 +50,13 @@ const userSlice = createSlice({
       .addCase(fetchAddress.fulfilled, (state, action) => {
         state.position = action.payload.position;
         state.address = action.payload.address;
-        state.state = 'idle';
+        state.status = 'idle';
       })
+      // eslint-disable-next-line
       .addCase(fetchAddress.rejected, (state, action) => {
         state.status = 'error';
-        state.error = action.error.message;
+        state.error =
+          'There was a problem getting your address. Make sure to fill this field';
       }),
 });
 
